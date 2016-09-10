@@ -71,7 +71,8 @@ public class myTwitterDataHelper extends SQLiteOpenHelper {
             followersValues.put(NAME_COL, user.getName());
             followersValues.put(HANDLE_COL, user.getScreenName());
             followersValues.put(BIO_COL, user.getDescription());
-            followersValues.put(FOLLOWER_IMG, user.getProfileImageURL());
+            followersValues.put(FOLLOWER_IMG, user.getProfileImageURL());//instead of save url , should save bitmap byte array for offline load
+            //should do service for update followers
 
             if (dbHelper != null)
                 dbHelper.getWritableDatabase().insertOrThrow(FOLLOWERS_TABLE, null, followersValues);
