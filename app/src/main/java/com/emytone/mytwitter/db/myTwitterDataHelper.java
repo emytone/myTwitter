@@ -69,7 +69,7 @@ public class myTwitterDataHelper extends SQLiteOpenHelper {
             //get each value from the table
             followersValues.put(FOLLOWER_COL, user.getId());
             followersValues.put(NAME_COL, user.getName());
-            followersValues.put(HANDLE_COL, user.getURL());
+            followersValues.put(HANDLE_COL, user.getScreenName());
             followersValues.put(BIO_COL, user.getDescription());
             followersValues.put(FOLLOWER_IMG, user.getProfileImageURL());
 

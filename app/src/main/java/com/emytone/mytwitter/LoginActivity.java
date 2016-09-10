@@ -60,7 +60,7 @@ public class LoginActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
 
         //get the preferences for the app
-        emyPrefs = getSharedPreferences("emyPrefs", 0);
+        emyPrefs = getSharedPreferences("myTwitterClientPrefs", 0);
 
         //find out if the user preferences are set
         if (emyPrefs.getString("user_token", null) == null) {
